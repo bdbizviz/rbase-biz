@@ -24,4 +24,5 @@ RUN mkdir /opt/Rutil
 RUN mkdir /app
 RUN mkdir /app/packages
 
-RUN R -e 'install.packages(c("stringr","forecast","arules","arulesViz","rpart","e1071","jsonlite","corrgram","Rserve","caret","ROCR","R2HTML","corrplot","data.table","doParallel","itertools","foreach","lubridate","TeachingSampling","rbokeh","dplyr","xgboost","klaR","elasticsearchr","R.utils","zoo","rJava","RJDBC","loggit","data.table","customelasticsearchr","elasticsearchr","FastRWeb","XML"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("stringr","forecast","arules","arulesViz","rpart","e1071","jsonlite","corrgram","caret","ROCR","R2HTML","corrplot","data.table","doParallel","itertools","foreach","lubridate","TeachingSampling","rbokeh","dplyr","xgboost","klaR","elasticsearchr","R.utils","zoo","rJava","RJDBC","loggit","data.table","customelasticsearchr","elasticsearchr","FastRWeb","XML"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.package("Rserve","Rserve_1.8-6.tgz","http://www.rforge.net/")'
