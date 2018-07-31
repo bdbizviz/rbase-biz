@@ -28,6 +28,6 @@ RUN R -e 'install.packages(c("stringr","forecast","arules","arulesViz","rpart","
 
 RUN R -e 'install.packages("Rserve", repos="http://www.rforge.net/")'
 
-RUN R -e 'install.packages(c("ada","adabag","dplyr","forecast","gbm","ggplot2","ggraph","glmnet","graphics","Hmisc","igraph","leaps","MAPA","MASS","mlr","prophet","quantregForest","randomForest","zoo","stats ","class","Boruta","Devtools","factoextra"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("ada","adabag","dplyr","forecast","gbm","ggplot2","ggraph"), repos="http://cran.us.r-project.org")'
 
 
