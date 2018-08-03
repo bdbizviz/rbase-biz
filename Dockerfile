@@ -19,6 +19,7 @@ RUN apt-get update && \
   aptitude install -y libcurl4-openssl-dev libssl-dev libcairo2-dev  libxt-dev libxml2-dev r-cran-xml && \
   apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
   apt-get clean all
+RUN apt-get install -y libudunits2-dev
 
 RUN mkdir /opt/Rutil
 RUN mkdir /app
@@ -28,7 +29,7 @@ RUN R -e 'install.packages(c("stringr","forecast","arules","arulesViz","rpart","
 
 RUN R -e 'install.packages("Rserve", repos="http://www.rforge.net/")'
 
-RUN R -e 'install.packages(c("ada","adabag","dplyr","forecast","gbm","ggplot2","ggraph"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("ada","adabag","dplyr","forecast","gbm","ggplot2"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("glmnet","graphics","Hmisc","igraph","leaps"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggord","klaR"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("randomForest"), repos="http://cran.us.r-project.org")'
@@ -42,10 +43,8 @@ RUN R -e 'install.packages(c("class"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("Boruta"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("Devtools"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("factoextra"), repos="http://cran.us.r-project.org")'
-RUN R -e 'install.packages(c("ggraph"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("e1071"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("forecast"), repos="http://cran.us.r-project.org")'
-RUN apt-get install -y libudunits2-dev
 RUN R -e 'install.packages(c("udunits2"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggforce"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggraph"), repos="http://cran.us.r-project.org")'
