@@ -45,6 +45,9 @@ RUN R -e 'install.packages(c("factoextra"), repos="http://cran.us.r-project.org"
 RUN R -e 'install.packages(c("ggraph"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("e1071"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("forecast"), repos="http://cran.us.r-project.org")'
-RUN R -e 'install.packages(c("prophet"), repos="http://cran.us.r-project.org")'
+RUN apt-get install -y libudunits2-dev
+RUN R -e 'install.packages(c("udunits2"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("ggforce"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("ggraph"), repos="http://cran.us.r-project.org")'
 
 
