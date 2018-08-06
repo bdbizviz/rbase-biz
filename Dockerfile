@@ -18,8 +18,8 @@ RUN apt-get update && \
   apt-get -y install aptitude && \
   aptitude install -y libcurl4-openssl-dev libssl-dev libcairo2-dev  libxt-dev libxml2-dev r-cran-xml && \
   apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
-  apt-get clean all
-RUN apt-get install -y libudunits2-dev
+  apt-get clean all && \
+  apt-get install -y libudunits2-dev
 
 RUN mkdir /opt/Rutil
 RUN mkdir /app
@@ -41,7 +41,7 @@ RUN R -e 'install.packages(c("quantregForest"), repos="http://cran.us.r-project.
 RUN R -e 'install.packages(c("zoo"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("class"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("Boruta"), repos="http://cran.us.r-project.org")'
-RUN R -e 'install.packages(c("Devtools"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("devtools"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("factoextra"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("e1071"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("forecast"), repos="http://cran.us.r-project.org")'
