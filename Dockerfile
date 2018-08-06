@@ -33,7 +33,7 @@ RUN R -e 'install.packages(c("ada","adabag","dplyr","forecast","gbm","ggplot2"),
 RUN R -e 'install.packages(c("glmnet","graphics","Hmisc","igraph","leaps"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggord","klaR"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("randomForest"), repos="http://cran.us.r-project.org")'
-RUN R -e 'install.packages(c("MAPA"), repos="http://cran.us.r-project.org")'
+#RUN R -e 'install.packages(c("MAPA"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("MASS"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("mlr"), repos="http://cran.us.r-project.org")'
 #RUN R -e 'install.packages(c("prophet"), repos="http://cran.us.r-project.org")'
