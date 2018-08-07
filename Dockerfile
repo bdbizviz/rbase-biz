@@ -46,5 +46,3 @@ RUN R -e 'install.packages(c("forecast"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("udunits2"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggforce"), repos="http://cran.us.r-project.org")'
 RUN R -e 'install.packages(c("ggraph"), repos="http://cran.us.r-project.org")'
-
-
